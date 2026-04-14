@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Launch Knox — Fast, Affordable Website Design in Knoxville, TN</title>
+<meta name="description" content="Site Launch Knox builds fast, affordable websites for small businesses in Knoxville and East Tennessee. Your site live in 1-2 weeks. Starting at $999.">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Site Launch Knox — Fast, Affordable Website Design in Knoxville, TN">
+<meta property="og:description" content="Your small business deserves a great website. We build fast, beautiful, SEO-friendly sites for Knoxville businesses — live in 1-2 weeks.">
+<meta property="og:url" content="https://sitelaunchknox.com/">
+<meta property="og:site_name" content="Site Launch Knox">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sitelaunchknox.com/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Site Launch Knox",
+  "url": "https://sitelaunchknox.com/",
+  "description": "Fast, affordable website design for small businesses in Knoxville and East Tennessee.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Knoxville",
+    "addressRegion": "TN",
+    "postalCode": "37931"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Knoxville" },
+    { "@type": "City", "name": "Maryville" },
+    { "@type": "City", "name": "Oak Ridge" },
+    { "@type": "City", "name": "Farragut" },
+    { "@type": "City", "name": "Sevierville" },
+    { "@type": "City", "name": "Lenoir City" },
+    { "@type": "State", "name": "Tennessee" }
+  ],
+  "priceRange": "$999 - $1,999"
+}
+</script>
+<style>
+:root {
+  --orange: #FF8200;
+  --orange-dark: #E07300;
+  --orange-light: #FFA040;
+  --dark: #1a1a1a;
+  --darker: #111111;
+  --charcoal: #2a2a2a;
+  --white: #ffffff;
+  --offwhite: #f9f8f6;
+  --lightgray: #e8e6e3;
+  --midgray: #888;
+  --textdark: #333;
+  --textsub: #666;
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--font-body); color:var(--textdark); line-height:1.6; background:var(--white); }
+img { max-width:100%; height:auto; display:block; }
+a { text-decoration:none; color:inherit; }
+
+/* ===== HEADER ===== */
+.site-header {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(17,17,17,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,130,0,0.15);
+}
+.header-inner {
+  max-width:1200px; margin:0 auto;
+  padding:16px 30px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.logo {
+  font-family:var(--font-head); font-weight:800;
+  font-size:22px; text-transform:uppercase; letter-spacing:3px;
+  color:var(--white);
+}
+.logo span { color:var(--orange); }
+.main-nav { display:flex; gap:28px; align-items:center; }
+.main-nav a {
+  font-family:var(--font-head); font-weight:500;
+  font-size:13px; text-transform:uppercase; letter-spacing:1.5px;
+  color:rgba(255,255,255,0.7); transition:color 0.3s;
+}
+.main-nav a:hover { color:var(--orange); }
+.btn-nav {
+  background:var(--orange); color:var(--white) !important;
+  padding:10px 24px; border-radius:6px;
+  font-weight:600 !important; letter-spacing:1px !important;
+  transition:background 0.3s !important;
+}
+.btn-nav:hover { background:var(--orange-dark) !important; }
+.hamburger { display:none; cursor:pointer; flex-direction:column; gap:5px; }
+.hamburger span { width:26px; height:2px; background:var(--white); transition:0.3s; }
+
+/* ===== HERO ===== */
+.hero {
+  background:var(--darker);
+  color:var(--white);
+  padding:160px 30px 100px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:0; right:0; bottom:0;
+  width:55%; background:linear-gradient(135deg, transparent 0%, rgba(255,130,0,0.08) 100%);
+  clip-path:polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero::after {
+  content:'LAUNCH'; position:absolute; bottom:-40px; right:-20px;
+  font-family:var(--font-head); font-size:220px; font-weight:900;
+  color:rgba(255,130,0,0.04); text-transform:uppercase; letter-spacing:20px;
+  pointer-events:none;
+}
+.hero-inner {
+  max-width:1200px; margin:0 auto; position:relative; z-index:2;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,130,0,0.12); border:1px solid rgba(255,130,0,0.3);
+  padding:6px 16px; border-radius:50px;
+  font-family:var(--font-head); font-size:12px; font-weight:600;
+  text-transform:uppercase; letter-spacing:2px;
+  color:var(--orange); margin-bottom:24px;
+}
+.hero h1 {
+  font-family:var(--font-head); font-weight:800;
+  font-size:52px; line-height:1.08; margin-bottom:24px;
+  letter-spacing:-1px;
+}
+.hero h1 .highlight {
+  color:var(--orange);
+  position:relative;
+}
+.hero-sub {
+  font-size:18px; line-height:1.7; color:rgba(255,255,255,0.7);
+  margin-bottom:36px; max-width:500px;
+}
+.hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+.btn-primary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:16px 36px; background:var(--orange); color:var(--white);
+  font-family:var(--font-head); font-weight:700; font-size:15px;
+  text-transform:uppercase; letter-spacing:1.5px;
+  border-radius:8px; transition:all 0.3s; border:none; cursor:pointer;
+}
+.btn-primary:hover { background:var(--orange-dark); transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,130,0,0.3); }
+.btn-ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:16px 36px; background:transparent; color:var(--white);
+  font-family:var(--font-head); font-weight:600; font-size:15px;
+  text-transform:uppercase; letter-spacing:1.5px;
+  border:2px solid rgba(255,255,255,0.25); border-radius:8px; transition:all 0.3s;
+}
+.btn-ghost:hover { border-color:var(--orange); color:var(--orange); }
+.hero-image {
+  position:relative;
+}
+.hero-image img {
+  width:100%; border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+.hero-stat {
+  position:absolute; bottom:-20px; left:-20px;
+  background:var(--white); color:var(--dark);
+  padding:16px 24px; border-radius:10px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.15);
+}
+.hero-stat .number {
+  font-family:var(--font-head); font-size:28px; font-weight:800;
+  color:var(--orange);
+}
+.hero-stat .label {
+  font-size:13px; color:var(--textsub); font-weight:500;
+}
+
+/* ===== WHO WE HELP ===== */
+.who-section {
+  background:var(--white);
+  padding:100px 30px;
+}
+.section-inner { max-width:1200px; margin:0 auto; }
+.section-tag {
+  font-family:var(--font-head); font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:3px;
+  color:var(--orange); margin-bottom:12px;
+}
+.section-heading {
+  font-family:var(--font-head); font-weight:800;
+  font-size:40px; line-height:1.15; margin-bottom:20px;
+  letter-spacing:-0.5px; color:var(--dark);
+}
+.section-sub {
+  font-size:17px; line-height:1.7; color:var(--textsub);
+  max-width:600px; margin-bottom:50px;
+}
+.who-grid {
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;
+}
+.who-card {
+  background:var(--offwhite); border-radius:12px;
+  padding:32px 24px; text-align:center;
+  border:2px solid transparent;
+  transition:all 0.3s;
+}
+.who-card:hover { border-color:var(--orange); transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.08); }
+.who-card .icon {
+  font-size:36px; margin-bottom:14px;
+}
+.who-card h3 {
+  font-family:var(--font-head); font-weight:700;
+  font-size:16px; text-transform:uppercase; letter-spacing:1px;
+}
+
+/* ===== HOW IT WORKS ===== */
+.process-section {
+  background:var(--dark); color:var(--white);
+  padding:100px 30px;
+  position:relative;
+}
+.process-section::after {
+  content:'1-2 WEEKS'; position:absolute; top:50%; right:40px;
+  font-family:var(--font-head); font-size:140px; font-weight:900;
+  color:rgba(255,130,0,0.05); transform:translateY(-50%) rotate(-90deg);
+  pointer-events:none; white-space:nowrap;
+}
+.process-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:30px;
+  margin-top:50px;
+}
+.process-step {
+  position:relative; padding:30px 24px;
+  background:rgba(255,255,255,0.04); border-radius:12px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:border-color 0.3s;
+}
+.process-step:hover { border-color:rgba(255,130,0,0.4); }
+.step-num {
+  font-family:var(--font-head); font-size:48px; font-weight:900;
+  color:var(--orange); line-height:1; margin-bottom:16px;
+}
+.process-step h3 {
+  font-family:var(--font-head); font-weight:700;
+  font-size:18px; text-transform:uppercase; letter-spacing:1px;
+  margin-bottom:8px;
+}
+.step-time {
+  font-family:var(--font-head); font-size:12px; font-weight:600;
+  text-transform:uppercase; letter-spacing:2px;
+  color:var(--orange); margin-bottom:12px;
+}
+.process-step p {
+  font-size:14px; line-height:1.7; color:rgba(255,255,255,0.6);
+}
+
+/* ===== WHAT YOU GET ===== */
+.features-section {
+  background:var(--offwhite);
+  padding:100px 30px;
+}
+.features-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  margin-top:50px;
+}
+.feature-card {
+  background:var(--white); padding:32px;
+  border-radius:12px; border:1px solid var(--lightgray);
+  transition:all 0.3s;
+}
+.feature-card:hover { border-color:var(--orange); box-shadow:0 8px 25px rgba(0,0,0,0.06); }
+.feature-card .icon { font-size:28px; margin-bottom:16px; }
+.feature-card h3 {
+  font-family:var(--font-head); font-weight:700;
+  font-size:17px; margin-bottom:10px;
+}
+.feature-card p { font-size:14px; line-height:1.7; color:var(--textsub); }
+
+/* ===== PRICING ===== */
+.pricing-section {
+  background:var(--white);
+  padding:100px 30px;
+}
+.pricing-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  margin-top:50px;
+}
+.price-card {
+  border:2px solid var(--lightgray); border-radius:16px;
+  padding:40px 30px; position:relative;
+  transition:all 0.3s;
+}
+.price-card.featured {
+  border-color:var(--orange);
+  box-shadow:0 12px 40px rgba(255,130,0,0.12);
+  transform:scale(1.03);
+}
+.price-card.featured .popular-badge {
+  position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+  background:var(--orange); color:var(--white);
+  padding:6px 20px; border-radius:50px;
+  font-family:var(--font-head); font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:2px;
+}
+.price-card h3 {
+  font-family:var(--font-head); font-weight:700;
+  font-size:22px; text-transform:uppercase; letter-spacing:1px;
+  margin-bottom:8px;
+}
+.price-card .price {
+  font-family:var(--font-head); font-weight:900;
+  font-size:48px; color:var(--dark); margin-bottom:6px;
+}
+.price-card .price-sub {
+  font-size:14px; color:var(--textsub); margin-bottom:24px;
+}
+.price-card ul { list-style:none; margin-bottom:30px; }
+.price-card li {
+  padding:10px 0; border-bottom:1px solid var(--offwhite);
+  font-size:14px; color:var(--textsub);
+  display:flex; align-items:center; gap:10px;
+}
+.price-card li::before { content:'✓'; color:var(--orange); font-weight:700; }
+.price-card .btn-price {
+  display:block; text-align:center;
+  padding:14px 24px; border-radius:8px;
+  font-family:var(--font-head); font-weight:700; font-size:14px;
+  text-transform:uppercase; letter-spacing:1.5px;
+  transition:all 0.3s; cursor:pointer;
+}
+.price-card .btn-price.filled {
+  background:var(--orange); color:var(--white); border:none;
+}
+.price-card .btn-price.filled:hover { background:var(--orange-dark); }
+.price-card .btn-price.outlined {
+  background:transparent; color:var(--orange);
+  border:2px solid var(--orange);
+}
+.price-card .btn-price.outlined:hover { background:var(--orange); color:var(--white); }
+
+/* ===== LOCAL SECTION ===== */
+.local-section {
+  background:var(--dark); color:var(--white);
+  padding:100px 30px;
+  position:relative; overflow:hidden;
+}
+.local-section::before {
+  content:''; position:absolute; inset:0;
+  background:url('https://images.unsplash.com/photo-1569839333583-7375336cde4b?w=1600&q=80') center/cover;
+  opacity:0.12;
+}
+.local-inner {
+  max-width:1200px; margin:0 auto; position:relative; z-index:2;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+}
+.local-inner .section-heading { color:var(--white); }
+.local-text {
+  font-size:17px; line-height:1.8; color:rgba(255,255,255,0.75);
+  margin-bottom:24px;
+}
+.local-areas {
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;
+}
+.local-areas span {
+  background:rgba(255,130,0,0.15); border:1px solid rgba(255,130,0,0.3);
+  padding:8px 18px; border-radius:50px;
+  font-family:var(--font-head); font-size:13px; font-weight:600;
+  text-transform:uppercase; letter-spacing:1px;
+  color:var(--orange);
+}
+.local-stats {
+  display:grid; grid-template-columns:1fr 1fr; gap:24px;
+}
+.stat-box {
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px; padding:30px 24px; text-align:center;
+}
+.stat-box .stat-num {
+  font-family:var(--font-head); font-size:44px; font-weight:900;
+  color:var(--orange); line-height:1;
+}
+.stat-box .stat-label {
+  font-size:14px; color:rgba(255,255,255,0.6); margin-top:8px;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section {
+  background:var(--offwhite);
+  padding:100px 30px;
+}
+.testimonials-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  margin-top:50px;
+}
+.testimonial-card {
+  background:var(--white); padding:32px;
+  border-radius:12px; border:1px solid var(--lightgray);
+  position:relative;
+}
+.testimonial-card .stars {
+  color:var(--orange); font-size:18px; letter-spacing:2px;
+  margin-bottom:16px;
+}
+.testimonial-card blockquote {
+  font-size:15px; line-height:1.8; color:var(--textsub);
+  font-style:italic; margin-bottom:20px;
+}
+.testimonial-card .reviewer {
+  font-family:var(--font-head); font-weight:700;
+  font-size:14px; text-transform:uppercase; letter-spacing:1px;
+}
+.testimonial-card .org {
+  font-size:13px; color:var(--midgray);
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-section {
+  background:var(--white);
+  padding:100px 30px;
+}
+.contact-wrapper {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;
+}
+.contact-form {
+  background:var(--offwhite); padding:40px; border-radius:16px;
+}
+.form-group { margin-bottom:20px; }
+.form-group label {
+  display:block; font-family:var(--font-head); font-weight:600;
+  font-size:13px; text-transform:uppercase; letter-spacing:1.5px;
+  margin-bottom:8px; color:var(--dark);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; padding:14px 18px;
+  border:2px solid var(--lightgray); border-radius:8px;
+  font-family:var(--font-body); font-size:15px;
+  transition:border-color 0.3s; background:var(--white);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline:none; border-color:var(--orange);
+}
+.form-group textarea { resize:vertical; min-height:120px; }
+.btn-submit {
+  width:100%; padding:16px;
+  background:var(--orange); color:var(--white); border:none;
+  font-family:var(--font-head); font-weight:700; font-size:16px;
+  text-transform:uppercase; letter-spacing:2px;
+  border-radius:8px; cursor:pointer; transition:all 0.3s;
+}
+.btn-submit:hover { background:var(--orange-dark); transform:translateY(-2px); box-shadow:0 8px 25px rgba(255,130,0,0.3); }
+.contact-info h2 {
+  font-family:var(--font-head); font-weight:800;
+  font-size:36px; line-height:1.15; margin-bottom:20px;
+}
+.contact-info .highlight { color:var(--orange); }
+.contact-info p {
+  font-size:16px; line-height:1.7; color:var(--textsub);
+  margin-bottom:24px;
+}
+.contact-perks { list-style:none; }
+.contact-perks li {
+  padding:12px 0; font-size:15px;
+  display:flex; align-items:center; gap:12px;
+  border-bottom:1px solid var(--lightgray);
+}
+.contact-perks li .perk-icon { font-size:20px; }
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background:var(--darker); color:var(--white);
+  padding:50px 30px 30px;
+}
+.footer-inner {
+  max-width:1200px; margin:0 auto;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:20px;
+}
+.footer-logo {
+  font-family:var(--font-head); font-weight:800;
+  font-size:18px; text-transform:uppercase; letter-spacing:2px;
+}
+.footer-logo span { color:var(--orange); }
+.footer-powered {
+  font-size:13px; color:rgba(255,255,255,0.4);
+}
+.footer-powered a { color:rgba(255,255,255,0.6); transition:color 0.3s; }
+.footer-powered a:hover { color:var(--orange); }
+.footer-bottom {
+  max-width:1200px; margin:20px auto 0;
+  padding-top:20px; border-top:1px solid rgba(255,255,255,0.08);
+  font-size:12px; color:rgba(255,255,255,0.3); text-align:center;
+}
+
+/* ===== MOBILE ===== */
+.mobile-menu {
+  display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+  background:var(--darker); z-index:99;
+  flex-direction:column; padding:100px 30px 40px;
+}
+.mobile-menu.active { display:flex; }
+.mobile-menu a {
+  font-family:var(--font-head); font-weight:600;
+  font-size:20px; text-transform:uppercase; letter-spacing:2px;
+  color:var(--white); padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width:1024px) {
+  .hero-inner { grid-template-columns:1fr; }
+  .hero-image { display:none; }
+  .hero h1 { font-size:42px; }
+  .who-grid { grid-template-columns:repeat(2,1fr); }
+  .process-grid { grid-template-columns:repeat(2,1fr); }
+  .features-grid { grid-template-columns:repeat(2,1fr); }
+  .pricing-grid { grid-template-columns:1fr; max-width:450px; margin-left:auto; margin-right:auto; }
+  .price-card.featured { transform:none; }
+  .local-inner { grid-template-columns:1fr; }
+  .testimonials-grid { grid-template-columns:1fr; }
+  .contact-wrapper { grid-template-columns:1fr; }
+}
+@media (max-width:768px) {
+  .main-nav { display:none; }
+  .hamburger { display:flex; }
+  .hero { padding:120px 20px 60px; }
+  .hero h1 { font-size:32px; }
+  .who-grid { grid-template-columns:1fr 1fr; }
+  .process-grid { grid-template-columns:1fr; }
+  .features-grid { grid-template-columns:1fr; }
+  .local-stats { grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Site <span>Launch</span> Knox</a>
+    <nav class="main-nav">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact" class="btn-nav">Get Started</a>
+    </nav>
+    <div class="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="#how-it-works" onclick="document.getElementById('mobile-menu').classList.remove('active')">How It Works</a>
+  <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.remove('active')">Pricing</a>
+  <a href="#testimonials" onclick="document.getElementById('mobile-menu').classList.remove('active')">Reviews</a>
+  <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('active')">Get Started</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">🚀 Knoxville's Fast-Track Web Design</div>
+      <h1>Your Business Online In <span class="highlight">Two Weeks.</span> Seriously.</h1>
+      <p class="hero-sub">We build fast, beautiful, SEO-friendly websites for small businesses across East Tennessee. No corporate pricing. No six-month timeline. Just a great site that gets you found online.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get Your Free Quote →</a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Website design on laptop screen">
+      <div class="hero-stat">
+        <div class="number">5.0 ★</div>
+        <div class="label">Google Reviews (76+)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="who-section">
+  <div class="section-inner">
+    <div class="section-tag">Who We Help</div>
+    <h2 class="section-heading">Built for Small Businesses<br>That Are Ready to Level Up</h2>
+    <p class="section-sub">You're great at what you do. You just need a website that shows it. We work with local businesses across East Tennessee who need a professional online presence without the big agency price tag.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="icon">🔨</div>
+        <h3>Contractors</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🌿</div>
+        <h3>Lawn &amp; Landscape</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🍕</div>
+        <h3>Restaurants</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🐾</div>
+        <h3>Pet Services</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">💇</div>
+        <h3>Salons &amp; Barbers</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🔧</div>
+        <h3>HVAC &amp; Plumbing</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🏋️</div>
+        <h3>Fitness &amp; Wellness</h3>
+      </div>
+      <div class="who-card">
+        <div class="icon">🧹</div>
+        <h3>Cleaning Services</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-tag" style="color:var(--orange);">How It Works</div>
+    <h2 class="section-heading" style="color:var(--white);">From First Call to Live Site.<br>In Four Simple Steps.</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-time">Day 1</div>
+        <h3>Free Consultation</h3>
+        <p>We hop on a quick 15-minute call. You tell us about your business, we tell you exactly what we can build and what it'll cost. No surprises.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-time">Days 2–7</div>
+        <h3>We Design &amp; Build</h3>
+        <p>Our team gets to work creating your site. Clean design, mobile-friendly, optimized to show up in local Google searches. We handle everything.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-time">Days 7–10</div>
+        <h3>You Review</h3>
+        <p>We share a preview link. You tell us what you love and what you want tweaked. We make revisions until you're thrilled with it.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-time">Days 10–14</div>
+        <h3>Your Site Goes Live</h3>
+        <p>We launch your site, connect your domain, and make sure everything is running perfectly. You're officially online and open for business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="features-section">
+  <div class="section-inner">
+    <div class="section-tag">What You Get</div>
+    <h2 class="section-heading">Every Site Comes Loaded</h2>
+    <p class="section-sub">We don't cut corners. Every site we build comes with the features your business actually needs to get found and win customers.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>Blazing Fast Load Speed</h3>
+        <p>Your site loads in under 1 second. Faster than 95% of your competitors. Google loves speed, and so do your customers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Over 70% of local searches happen on phones. Your site will look perfect on every screen size, every time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔍</div>
+        <h3>Local SEO Built In</h3>
+        <p>Structured data, optimized meta tags, Google Business integration — everything you need to show up when locals search for your services.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📩</div>
+        <h3>Lead Capture Form</h3>
+        <p>A professional contact form that sends inquiries straight to your inbox. Never miss a potential customer again.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h3>Secure &amp; Hack-Proof</h3>
+        <p>No WordPress plugins to exploit, no database to hack. Your site is virtually immune to the security issues that plague most small business sites.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🗺️</div>
+        <h3>Google Maps &amp; Directions</h3>
+        <p>Embedded map showing your location so customers can find you instantly. Perfect for brick-and-mortar businesses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="section-tag">Pricing</div>
+    <h2 class="section-heading">Honest Pricing. No Hidden Fees.</h2>
+    <p class="section-sub">Every package includes design, development, SEO setup, and launch. Pick the one that fits your business.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">$999</div>
+        <div class="price-sub">One-time setup fee</div>
+        <ul>
+          <li>1–2 page website</li>
+          <li>Mobile responsive design</li>
+          <li>Contact form</li>
+          <li>Basic SEO setup</li>
+          <li>Google Maps embed</li>
+          <li>1 round of revisions</li>
+        </ul>
+        <a href="#contact" class="btn-price outlined">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Standard</h3>
+        <div class="price">$1,499</div>
+        <div class="price-sub">One-time setup fee</div>
+        <ul>
+          <li>3–5 page website</li>
+          <li>Custom design &amp; branding</li>
+          <li>Lead capture form</li>
+          <li>Full local SEO package</li>
+          <li>Google Business optimization</li>
+          <li>2 rounds of revisions</li>
+          <li>Social media links</li>
+        </ul>
+        <a href="#contact" class="btn-price filled">Get Started</a>
+      </div>
+      <div class="price-card">
+        <h3>Premium</h3>
+        <div class="price">$1,999</div>
+        <div class="price-sub">One-time setup fee</div>
+        <ul>
+          <li>5+ page website</li>
+          <li>Premium custom design</li>
+          <li>Advanced lead forms</li>
+          <li>Full SEO + schema markup</li>
+          <li>Photo gallery / portfolio</li>
+          <li>3 rounds of revisions</li>
+          <li>Priority 48-hour support</li>
+        </ul>
+        <a href="#contact" class="btn-price outlined">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL KNOXVILLE -->
+<section class="local-section">
+  <div class="local-inner">
+    <div>
+      <div class="section-tag">Proudly Local</div>
+      <h2 class="section-heading">We Know East Tennessee Because We Live Here</h2>
+      <p class="local-text">We're not some faceless agency in another state. We're based right here in Knoxville, and we've been helping local businesses build their online presence for over a decade. We know this market, we know your customers, and we know what it takes to stand out in East Tennessee.</p>
+      <p class="local-text">When you work with us, you're working with your neighbors. We shop at your stores, eat at your restaurants, and drive past your job sites every day.</p>
+      <div class="local-areas">
+        <span>Knoxville</span>
+        <span>Farragut</span>
+        <span>Maryville</span>
+        <span>Oak Ridge</span>
+        <span>Sevierville</span>
+        <span>Lenoir City</span>
+        <span>Clinton</span>
+        <span>Powell</span>
+      </div>
+    </div>
+    <div class="local-stats">
+      <div class="stat-box">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years in Knoxville</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">Local Projects</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5.0</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4x</div>
+        <div class="stat-label">Best Agency Winner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="section-inner">
+    <div class="section-tag">Testimonials</div>
+    <h2 class="section-heading">Don't Take Our Word For It</h2>
+    <p class="section-sub">Here's what real clients have to say. 76+ five-star reviews on Google and counting.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They took the time to truly understand our vision and translated it into a website that beautifully reflects our mission and values."</blockquote>
+        <div class="reviewer">Nancy Manning</div>
+        <div class="org">Tennessee Citizens for Wilderness Planning</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Greg and the team have knocked it out of the park with our website needs! We are so thankful for the New Frame Creative team!"</blockquote>
+        <div class="reviewer">LeighAnne Fritts</div>
+        <div class="org">Interstate Mechanical Services</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The team was extremely helpful, timely, and devoted. I appreciate their attention to detail and their willingness to create a beautiful and user friendly website!"</blockquote>
+        <div class="reviewer">Kara C.</div>
+        <div class="org">University of Tennessee College of Nursing</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They were quick, responsive and professional throughout the entire process. I would highly recommend them if you're looking for guidance putting together a website."</blockquote>
+        <div class="reviewer">Kaki R.</div>
+        <div class="org">Knox County Safe Baby Court</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The team at New Frame Creative is amazingly talented! The end result is always amazing and the turnaround time always meets my schedule."</blockquote>
+        <div class="reviewer">Sandy R.</div>
+        <div class="org">Get Fully Funded</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They were able to hone in on what we were looking for, all while being incredibly flexible. Their team were impressively adaptable and diligently responsive."</blockquote>
+        <div class="reviewer">Max G.</div>
+        <div class="org">Kalmia Gardens Arts Festival</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section" id="contact">
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <div class="section-tag">Get Started</div>
+      <h2>Ready to <span class="highlight">Launch?</span></h2>
+      <p>Fill out the form and we'll get back to you within 24 hours with a free, no-obligation quote. Most projects are live within 1-2 weeks of kickoff.</p>
+      <ul class="contact-perks">
+        <li><span class="perk-icon">💬</span> Free 15-minute consultation</li>
+        <li><span class="perk-icon">💰</span> No-obligation quote</li>
+        <li><span class="perk-icon">⏱️</span> Live in 1-2 weeks</li>
+        <li><span class="perk-icon">📍</span> Based in Knoxville, TN</li>
+        <li><span class="perk-icon">⭐</span> 5.0 stars on Google (76+ reviews)</li>
+      </ul>
+    </div>
+    <!--
+      FORMSPREE SETUP:
+      1. Create a free account at formspree.io
+      2. Create a new form
+      3. Replace YOUR_FORM_ID below with the ID Formspree gives you (e.g., "xrgvqkpl")
+      The free tier gives you 50 submissions/month, which is plenty to start.
+    -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="John Smith">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(865) 555-0123">
+      </div>
+      <div class="form-group">
+        <label for="business">Type of Business</label>
+        <select id="business" name="business_type">
+          <option value="" disabled selected>Select your industry</option>
+          <option>Contractor / Construction</option>
+          <option>Lawn Care / Landscaping</option>
+          <option>Restaurant / Food Service</option>
+          <option>Pet Services</option>
+          <option>Salon / Barber</option>
+          <option>HVAC / Plumbing / Electrical</option>
+          <option>Fitness / Wellness</option>
+          <option>Cleaning Services</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us About Your Project</label>
+        <textarea id="message" name="message" placeholder="What does your business do? Do you have an existing website? What are you looking for?"></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Get My Free Quote →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">Site <span>Launch</span> Knox</div>
+    <div class="footer-powered">
+      Powered by <a href="https://newframecreative.com" target="_blank">New Frame Creative</a> · Knoxville, TN
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Site Launch Knox. All rights reserved. · Fast, affordable website design for Knoxville &amp; East Tennessee.
+  </div>
+</footer>
+
+</body>
+</html>
