@@ -514,6 +514,71 @@ a { text-decoration:none; color:inherit; }
   font-size:12px; color:rgba(255,255,255,0.3); text-align:center;
 }
 
+/* ===== HOSTING ===== */
+.hosting-block {
+  margin-top:60px; padding:48px 40px;
+  background:var(--offwhite); border-radius:16px;
+  border:2px solid var(--lightgray);
+  text-align:center;
+}
+.hosting-block h3 {
+  font-family:var(--font-head); font-weight:800;
+  font-size:26px; margin-bottom:8px; color:var(--dark);
+}
+.hosting-block .hosting-sub {
+  font-size:16px; color:var(--textsub); line-height:1.7;
+  max-width:600px; margin:0 auto 32px;
+}
+.hosting-options {
+  display:grid; grid-template-columns:1fr 1fr; gap:20px;
+  max-width:640px; margin:0 auto 28px;
+}
+.hosting-option {
+  background:var(--white); border:2px solid var(--lightgray);
+  border-radius:12px; padding:28px 24px;
+  transition:all 0.3s; position:relative;
+}
+.hosting-option:hover { border-color:var(--orange); }
+.hosting-option.annual { border-color:var(--orange); }
+.hosting-option.annual .save-badge {
+  position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+  background:var(--orange); color:var(--white);
+  padding:4px 14px; border-radius:50px;
+  font-family:var(--font-head); font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:1.5px;
+  white-space:nowrap;
+}
+.hosting-option .option-label {
+  font-family:var(--font-head); font-weight:700;
+  font-size:13px; text-transform:uppercase; letter-spacing:1.5px;
+  color:var(--midgray); margin-bottom:8px;
+}
+.hosting-option .option-price {
+  font-family:var(--font-head); font-weight:900;
+  font-size:36px; color:var(--dark); line-height:1.1;
+}
+.hosting-option .option-price span {
+  font-size:16px; font-weight:600; color:var(--textsub);
+}
+.hosting-option .option-note {
+  font-size:13px; color:var(--textsub); margin-top:6px;
+}
+.hosting-includes {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:12px 28px;
+  max-width:600px; margin:0 auto;
+}
+.hosting-includes span {
+  font-size:14px; color:var(--textsub);
+  display:flex; align-items:center; gap:6px;
+}
+.hosting-includes span::before {
+  content:'✓'; color:var(--orange); font-weight:700;
+}
+@media (max-width:768px) {
+  .hosting-options { grid-template-columns:1fr; max-width:340px; }
+  .hosting-block { padding:36px 24px; }
+}
+
 /* ===== MOBILE ===== */
 .mobile-menu {
   display:none; position:fixed; top:0; left:0; right:0; bottom:0;
@@ -774,6 +839,34 @@ a { text-decoration:none; color:inherit; }
         <a href="#contact" class="btn-price outlined">Get Started</a>
       </div>
     </div>
+
+    <!-- HOSTING -->
+    <div class="hosting-block">
+      <h3>Hosting &amp; Domain Included</h3>
+      <p class="hosting-sub">Every site needs a home. Our hosting keeps your site fast, secure, and online 24/7 — and your domain name is included at no extra cost.</p>
+      <div class="hosting-options">
+        <div class="hosting-option monthly">
+          <div class="option-label">Monthly</div>
+          <div class="option-price">$25<span>/mo</span></div>
+          <div class="option-note">Cancel anytime</div>
+        </div>
+        <div class="hosting-option annual">
+          <div class="save-badge">Save $50</div>
+          <div class="option-label">Annual</div>
+          <div class="option-price">$250<span>/yr</span></div>
+          <div class="option-note">2 months free</div>
+        </div>
+      </div>
+      <div class="hosting-includes">
+        <span>Custom domain name</span>
+        <span>SSL security certificate</span>
+        <span>Lightning-fast CDN</span>
+        <span>99.9% uptime</span>
+        <span>Daily backups</span>
+        <span>Ongoing support</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
