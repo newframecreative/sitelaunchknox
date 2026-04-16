@@ -17,6 +17,14 @@
 <meta property="og:image:height" content="800">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80">
 <link rel="canonical" href="https://sitelaunchknox.com/">
+<!-- Google Ads Global Site Tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17850847325"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17850847325');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -929,6 +937,91 @@ a { text-decoration:none; color:inherit; }
     &copy; 2026 Site Launch Knox. All rights reserved. · Fast, affordable website design for Knoxville &amp; East Tennessee.
   </div>
 </footer>
+
+<!-- Google Ads Conversion Tracking + Partial Form Capture -->
+<script>
+(function() {
+  var form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  // ========================================
+  // 1. GOOGLE ADS CONVERSION TRACKING
+  //    Fires when the form is successfully submitted
+  // ========================================
+  form.addEventListener('submit', function() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17850847325/7r9qCPT_np0cEN2g-b9C',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  });
+
+  // ========================================
+  // 2. PARTIAL FORM CAPTURE (Form Abandonment)
+  //    Captures field data when a user starts filling out
+  //    the form but leaves without submitting.
+  //    Sends partial data to Formspree with [PARTIAL] tag.
+  // ========================================
+  var formData = {};
+  var hasInteracted = false;
+  var formSubmitted = false;
+  var partialSent = false;
+
+  // Track field interactions on blur (when user leaves a field)
+  var fields = form.querySelectorAll('input, select, textarea');
+  fields.forEach(function(field) {
+    field.addEventListener('blur', function() {
+      if (field.value && field.value.trim()) {
+        formData[field.name || field.id] = field.value.trim();
+        hasInteracted = true;
+      }
+    });
+  });
+
+  // Mark as submitted so we don't send a partial
+  form.addEventListener('submit', function() {
+    formSubmitted = true;
+  });
+
+  // Send partial data when user leaves the page
+  function sendPartial() {
+    if (formSubmitted || partialSent || !hasInteracted) return;
+    // Only send if we have at least a name or email
+    if (!formData.name && !formData.email) return;
+    partialSent = true;
+
+    var partial = new FormData();
+    partial.append('_subject', '[PARTIAL FORM] Abandoned lead - Site Launch Knox');
+    for (var key in formData) {
+      partial.append(key, formData[key]);
+    }
+    partial.append('_partial', 'true');
+    partial.append('_note', 'This visitor started filling out the form but did not submit it.');
+
+    // Use sendBeacon for reliability on page unload
+    if (navigator.sendBeacon) {
+      var blob = new Blob([new URLSearchParams(partial).toString()], {
+        type: 'application/x-www-form-urlencoded'
+      });
+      navigator.sendBeacon('https://formspree.io/f/mlgaekgk', blob);
+    } else {
+      // Fallback: synchronous XHR
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://formspree.io/f/mlgaekgk', false);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.send(new URLSearchParams(partial).toString());
+    }
+  }
+
+  // Fire on page unload (tab close, navigate away, etc.)
+  window.addEventListener('pagehide', sendPartial);
+  document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') sendPartial();
+  });
+})();
+</script>
 
 </body>
 </html>
